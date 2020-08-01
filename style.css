@@ -7,6 +7,11 @@ body {
     line-height: 90px;
 }
 
+#title {
+    padding: 5px;
+    margin: 5px;
+}
+
 #score, #directions {
     font-size: 20px;
     text-align: center;
