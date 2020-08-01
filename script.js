@@ -67,7 +67,7 @@ document.addEventListener("keyup", event => {
 
 setInterval(function() {
     feet++;
-    score.innerHTML="FEET  " + Math.floor(feet / 50);
+    score.innerHTML="FEET SHREDED  " + Math.floor(feet / 50);
     var flowerLeft = parseInt(window.getComputedStyle(flower).getPropertyValue("left"));
     var characterLeft = parseInt(window.getComputedStyle(character).getPropertyValue("left"));
     var flowerTop = parseInt(window.getComputedStyle(flower).getPropertyValue("top"));
@@ -76,7 +76,7 @@ setInterval(function() {
     characterTop -= 50;
     if (flowerLeft <= (characterLeft + 150) && flowerLeft >= (characterLeft)) {
          if (flowerTop < characterTop) {
-            if(!alert("Wipeout, bro!")){window.location.reload();}
+            if(!alert("Rembeer to press SPACE BAR to OLIE and the ARROW KEYS to move FORWARD and BACKWARD, little dude. AND don't gnar the flowers or yeet the birds. Nature is steezy!")){window.location.reload();}
          }
      }
 },1);

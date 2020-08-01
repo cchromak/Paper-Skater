@@ -7,15 +7,11 @@ body {
     line-height: 90px;
 }
 
-#score {
+#score, #directions {
     font-size: 20px;
     text-align: center;
-}
-
-
-#title {
-    margin-top: 10px;
-    padding-top: 10px;
+    margin: 0px;
+    padding: 0px;
 }
     
 #board {
