@@ -76,7 +76,7 @@ setInterval(function() {
     characterTop -= 50;
     if (flowerLeft <= (characterLeft + 150) && flowerLeft >= (characterLeft)) {
          if (flowerTop < characterTop) {
-            if(!alert("Rembeer to press SPACE BAR to OLIE and the ARROW KEYS to move FORWARD and BACKWARD, little dude. AND don't gnar the flowers or yeet the birds. Nature is steezy!")){window.location.reload();}
+            if(!alert("Remember to press SPACE BAR to OLIE and the ARROW KEYS to move FORWARD and BACKWARD, little dude. AND don't gnar the flowers or yeet the birds. Nature is steezy!")){window.location.reload();}
          }
      }
 },1);
