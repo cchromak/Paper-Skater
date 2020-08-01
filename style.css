@@ -1,0 +1,116 @@
+
+body {
+    font-family: 'Playfair Display', serif;
+    color: black;
+    text-align: center;
+    font-size: 60px;
+    line-height: 90px;
+}
+
+#score {
+    font-size: 20px;
+    text-align: center;
+}
+
+
+#title {
+    margin-top: 10px;
+    padding-top: 10px;
+}
+    
+#board {
+    height: 500px;
+    width: 1200px;
+    border: 1px solid black;
+    margin: auto;
+    position: relative;
+}
+
+#character {
+    width: 15%;
+    position: absolute;
+    top: 315px;
+    left: 150px;
+    z-index: 3;
+}
+
+#cloud {
+    position:  relative;
+    animation: cloud 17s infinite linear;
+    z-index: 2;
+}
+
+#cloudTwo {
+    position:  relative;
+    animation: cloudTwo 22s infinite linear;
+    z-index: 2;
+    
+}
+
+#flower {
+    position: relative;
+    width: 90px;
+    top: 230px;
+    animation: flowers 3s infinite linear;
+    z-index: 100;
+}
+
+#bird {
+    position: relative;
+    width: 90px;
+    animation: bird 8s infinite linear;
+    z-index: 100;
+}
+
+#sun {
+    width: 200px;
+    position: relative;
+    animation: sun 4s infinite linear;
+    z-index: 1;
+}
+
+@keyframes sun{
+
+    0%{top: -40px;}
+    25%{top: -40px;}
+    50%{top: -30px;}
+    75%{top: -30px;}
+    100%{top: -40px;}
+
+    0%{left: -30px;}
+    25%{left: -20px;}
+    50%{left: -20px;}
+    75%{left: -30px;}
+    100%{left: -30px;}
+
+}
+
+
+@keyframes cloud{
+    0%{left: 870px;}
+    100%{left: -5px;}
+    0%{top: 0px;}
+    25%{top: 20px;}
+    100%{top: 30px;}
+}
+
+@keyframes cloudTwo {
+    0%{left: 440px;}
+    100%{left:-345px;}
+    0%{top:-20px;}
+    75%{top: -40px;}
+    100%{top: -30px;}
+}
+
+@keyframes flowers {
+    0%{left: 340px;}
+    100%{left:-780px;}
+}
+
+@keyframes bird {
+    0%{left: 220px;}
+    100%{left:-885px;}
+    0%{top:-20px;}
+    50%{top: -40px;}
+    100%{top: -20px;}
+}

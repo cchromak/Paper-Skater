@@ -1,0 +1,88 @@
+var character = document.getElementById("character");
+var board = document.getElementById("board");
+var flower = document.getElementById("flower");
+var score = document.getElementById("score");
+var fall = 0;
+var counter = 0;
+var currentClouds = [];
+var both = 0;
+var feet = 0;
+
+
+function moveLeft(){
+    var left = parseInt(window.getComputedStyle(character).getPropertyValue("left"));
+    if (left > 0) {
+        character.style.left = left - 2 + "px";
+    }
+}
+
+function moveRight(){
+    var left = parseInt(window.getComputedStyle(character).getPropertyValue("left"));
+    if (left < 900) {
+        character.style.left = left + 2 + "px";
+    }
+}
+
+function jump() {
+    var top = parseFloat(window.getComputedStyle(character).getPropertyValue("top"));
+    if (top == 149) {
+        fall = 1;
+    }
+    if (top == 317) {
+        fall = 0;
+        clearInterval(interval);
+    }
+    if (fall == 0) {
+        if (top >= 150) {
+            character.style.top = top - 2 + "px";
+    }
+} else { 
+        if (top <= 315) {
+            character.style.top = top + 2 + "px";
+        }
+    }
+}
+
+document.addEventListener("keydown", event => {
+    if (both == 0) {
+    if (event.keyCode == 32) {
+        interval = setInterval(jump, 1);
+    } else if(event.key =="ArrowLeft"){
+        interval = setInterval(moveLeft, 1);
+    } else if(event.key == "ArrowRight"){
+        interval = setInterval(moveRight, 1);
+    }
+    both++;
+}
+});
+
+
+document.addEventListener("keyup", event => {
+    var top = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
+    if(event.key == "ArrowLeft" || event.key == "ArrowRight"){
+        both = 0;
+        clearInterval(interval);
+    }
+});
+
+setInterval(function() {
+    feet++;
+    score.innerHTML="FEET  " + Math.floor(feet / 50);
+    var flowerLeft = parseInt(window.getComputedStyle(flower).getPropertyValue("left"));
+    var characterLeft = parseInt(window.getComputedStyle(character).getPropertyValue("left"));
+    var flowerTop = parseInt(window.getComputedStyle(flower).getPropertyValue("top"));
+    var characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
+    flowerLeft += 780;
+    characterTop -= 50;
+    if (flowerLeft <= (characterLeft + 150) && flowerLeft >= (characterLeft)) {
+         if (flowerTop < characterTop) {
+            if(!alert("Wipeout, bro!")){window.location.reload();}
+         }
+     }
+},1);
+
+
+
+ 
+
+
