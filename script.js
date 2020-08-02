@@ -87,7 +87,7 @@ setInterval(function() {
     }
     if (flowerLeft <= (characterLeft + 150) && flowerLeft >= (characterLeft)) {
          if (flowerTop < characterTop) {
-           if (!alert("Remember to press SPACE BAR to OLIE and the ARROW KEYS to move FORWARD and BACKWARD, little dude. AND don't gnar the flowers or yeet the birds. Nature is steezy!")){window.location.reload();}
+           if (!alert("Remember to tap SPACE BAR to OLIE and the ARROW KEYS to move FORWARD and BACKWARD, little dude. You can only olie when you're NOT MOVING. DON'T gnar the FLOWERS or yeet the BIRDS. Nature is steezy!")){window.location.reload();}
          }
      }
 },1);
