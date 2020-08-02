@@ -8,7 +8,7 @@ body {
 }
 
 #title {
-    padding: 5px;
+    padding: 10px;
     margin: 5px;
 }
 
@@ -59,14 +59,13 @@ body {
 #bird {
     position: relative;
     width: 90px;
-    animation: bird 9s infinite linear;
+    animation: bird 10s infinite linear;
     z-index: 100;
 }
 
 #sun {
     width: 200px;
     position: relative;
-    
     animation: sun 4s infinite linear;
     z-index: 1;
 }

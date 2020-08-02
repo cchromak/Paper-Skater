@@ -40,6 +40,7 @@ function jump() {
 } else { 
         if (top <= 315) {
             character.style.top = top + 2 + "px";
+            both = 0;
         }
     }
 }
@@ -81,12 +82,12 @@ setInterval(function() {
     flowerTop += 50;
     if (birdLeft <= (characterLeft + 75) && birdLeft >= (characterLeft - 75)){
         if (birdTop > characterTop) {
-            if(!alert("Remember to press SPACE BAR to OLIE and the ARROW KEYS to move FORWARD and BACKWARD, little dude. AND don't gnar the flowers or yeet the birds. Nature is steezy!")){window.location.reload();}
+           if(!alert("Remember to press SPACE BAR to OLIE and the ARROW KEYS to move FORWARD and BACKWARD, little dude. AND don't gnar the flowers or yeet the birds. Nature is steezy!")){window.location.reload();}
         } 
     }
     if (flowerLeft <= (characterLeft + 150) && flowerLeft >= (characterLeft)) {
          if (flowerTop < characterTop) {
-            if (!alert("Remember to press SPACE BAR to OLIE and the ARROW KEYS to move FORWARD and BACKWARD, little dude. AND don't gnar the flowers or yeet the birds. Nature is steezy!")){window.location.reload();}
+           if (!alert("Remember to press SPACE BAR to OLIE and the ARROW KEYS to move FORWARD and BACKWARD, little dude. AND don't gnar the flowers or yeet the birds. Nature is steezy!")){window.location.reload();}
          }
      }
 },1);
