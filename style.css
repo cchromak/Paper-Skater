@@ -37,13 +37,13 @@ body {
 
 #cloud {
     position:  relative;
-    animation: cloud 17s infinite linear;
+    animation: cloud 20s infinite linear;
     z-index: 2;
 }
 
 #cloudTwo {
     position:  relative;
-    animation: cloudTwo 22s infinite linear;
+    animation: cloudTwo 40s infinite linear;
     z-index: 2;
     
 }
@@ -59,13 +59,14 @@ body {
 #bird {
     position: relative;
     width: 90px;
-    animation: bird 8s infinite linear;
+    animation: bird 9s infinite linear;
     z-index: 100;
 }
 
 #sun {
     width: 200px;
     position: relative;
+    
     animation: sun 4s infinite linear;
     z-index: 1;
 }

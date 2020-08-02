@@ -2,6 +2,7 @@ var character = document.getElementById("character");
 var board = document.getElementById("board");
 var flower = document.getElementById("flower");
 var score = document.getElementById("score");
+var bird = document.getElementById("bird");
 var fall = 0;
 var counter = 0;
 var currentClouds = [];
@@ -70,13 +71,22 @@ setInterval(function() {
     score.innerHTML="FEET SHREDED  " + Math.floor(feet / 50);
     var flowerLeft = parseInt(window.getComputedStyle(flower).getPropertyValue("left"));
     var characterLeft = parseInt(window.getComputedStyle(character).getPropertyValue("left"));
+    var birdLeft = parseInt(window.getComputedStyle(bird).getPropertyValue("left"));
     var flowerTop = parseInt(window.getComputedStyle(flower).getPropertyValue("top"));
     var characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
+    var birdTop = parseInt(window.getComputedStyle(bird).getPropertyValue("top"));
+    birdTop += 197;
+    birdLeft += 885;
     flowerLeft += 780;
-    characterTop -= 50;
+    flowerTop += 50;
+    if (birdLeft <= (characterLeft + 75) && birdLeft >= (characterLeft - 75)){
+        if (birdTop > characterTop) {
+            if(!alert("Remember to press SPACE BAR to OLIE and the ARROW KEYS to move FORWARD and BACKWARD, little dude. AND don't gnar the flowers or yeet the birds. Nature is steezy!")){window.location.reload();}
+        } 
+    }
     if (flowerLeft <= (characterLeft + 150) && flowerLeft >= (characterLeft)) {
          if (flowerTop < characterTop) {
-            if(!alert("Remember to press SPACE BAR to OLIE and the ARROW KEYS to move FORWARD and BACKWARD, little dude. AND don't gnar the flowers or yeet the birds. Nature is steezy!")){window.location.reload();}
+            if (!alert("Remember to press SPACE BAR to OLIE and the ARROW KEYS to move FORWARD and BACKWARD, little dude. AND don't gnar the flowers or yeet the birds. Nature is steezy!")){window.location.reload();}
          }
      }
 },1);
