@@ -1,4 +1,4 @@
-# Paper-Skater
+# Paper Skater
 Arts and crafts/skateboarding themed side scroller.
 
 ## Idea
