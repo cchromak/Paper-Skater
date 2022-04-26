@@ -17,5 +17,5 @@ having the character endlessly jump until it inevitably crashes into either the 
 The current workaround is to express these limitations in the instructions, but I hope to fix 
 this shortly.
 
-## Chek it out
+## Check it out
 https://cchromak.github.io/Paper-Skater/
